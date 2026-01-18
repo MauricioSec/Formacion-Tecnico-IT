@@ -4,11 +4,15 @@
 **Modelo de Motor:** YTO YM6S4WF-C-11
 **Controladores:** Panel Digital Local (Sala de Máquinas) + Panel Remoto (Puente de Mando)
 
-## 📡 Diagrama de Conectividad (Network Topology)
-Se identifica una red de comunicación industrial entre dos nodos:
-1.  **Nodo A (Local - Tier 0):** Tablero en Sala de Máquinas. Tiene prioridad de control (Arranque/Parada).
-2.  **Nodo B (Remoto - Tier 1):** Tablero en Puente. Función principal de telemetría (Visualización de datos para navegación).
-3.  **Enlace (Link):** Cableado físico que transporta señales de sensores (RPM, Presión, Temp) hacia el puente. Indicado por el LED "REMOTE" en el panel.
+## 📡 Diagrama de Conectividad (Capa Física - Layer 1)
+- **Tipo de Enlace:** Conexión cableada punto a punto (Hardwired Analog Multi-core).
+- **Medio de Transmisión:** Cable multipar con conectores de aviación/militares en los extremos.
+- **Protocolo:** No aplica (Señalización eléctrica analógica pura: 0-10V / 4-20mA / Resistiva).
+
+## 🛡️ Perfil de Ciberseguridad
+- **Inmunidad Digital:** Alta. Al no utilizar protocolos TCP/IP ni buses de datos seriales, este enlace es inmune a ciberataques remotos (Ransomware/Malware). Es un sistema "Air-gapped" por naturaleza física.
+- **Vulnerabilidad Física:** Alta. La seguridad depende enteramente de la integridad física del cableado. Un atacante con acceso físico podría interceptar o falsificar señales individuales interviniendo los pines específicos del conector.
+
 
 ## 🛡️ Análisis de Vulnerabilidad: "Ceguera del Operador"
 El sistema depende de la confianza entre el Nodo A y el Nodo B.
