@@ -6,7 +6,7 @@ Bitácora de aprendizaje y laboratorios prácticos de Soporte IT (Hardware, Soft
 
 ### Nivel 1: Fundamentos
 - [x] **Lección 0:** Configuración del Portafolio y Entorno.
-- [ ] **Lección 1:** Electricidad Básica, Seguridad ESD y Multímetro.
+- [x] **Lección 1:** Electricidad Básica, Seguridad ESD y Multímetro.
 - [ ] **Lección 2:** Anatomía del Hardware (PC y Laptop).
 - [ ] **Lección 3:** Herramientas del Taller (Software y Hardware).
 
